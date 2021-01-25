@@ -1,4 +1,33 @@
+* { margin: 0; padding: 0; }
+
+header {
+	background-color: #363d38;
+	color: #d3e0d7;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	top: 0;
+	padding: 30px;
+	margin: 0px;
+}
+
+
+
+
 body {
-  background-color: #0f0700;
-   color: white;
+	background-color: #0f0700;
+	color: white;
+	position: relative;
+}
+
+
+footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: #777;
+	text-align: right;
+	color: white;
+	width: 100%;
+	padding: 0px 20px 5px 0px;
 }
