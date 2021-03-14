@@ -16,11 +16,17 @@ topnav {
 	
 }
 
-
 body {
 	background-color: #0f0700;
 	color: white;
 	position: relative;
+}
+
+nav {
+	background-color: #0f0700;
+	color: white;
+	position: relative;
+	margin: 5px;
 }
 
 
@@ -38,4 +44,16 @@ footer {
 
 footer a {
 	color: #7eeda1;
+}
+
+/* Progress Bars Stuff */
+#myProgress {
+  width: 250px;
+  background-color: grey;
+}
+
+#myBar {
+  width: 1px;
+  height: 30px;
+  background-color: green;
 }

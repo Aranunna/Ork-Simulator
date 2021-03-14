@@ -1,17 +1,19 @@
-
+import 'Classes\SelectedAction.js';
 // Early Game
 //Constants
 var teeth = 0;
-var shootas = 0;
+var shootas = 1;
 
 //methods
 
+//Adds teeth when clicked
 function teethClick(number){
     teeth = teeth + number;
 	document.getElementById("teeth").innerHTML = teeth;
 };
 
-
+//Buy Functions
+//Buys Shootas
 function shootasBuy(){ //Template for exponential increase
 	var shootaCost = Math.floor(10 * Math.pow(1.1,shootas)); //works out cost of shoota
 	if(teeth >= shootaCost){  //Checks if upgrade can be afforded
@@ -24,7 +26,29 @@ function shootasBuy(){ //Template for exponential increase
 	document.getElementById('shootaCost').innerHTML = nextCost;
 }
 
-// Constants
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+		teeth += 1;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+} 
+
+
+// Constantly running functions
+
 
 window.setInterval(function(){
 	teethClick(shootas);
